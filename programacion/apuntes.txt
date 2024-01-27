@@ -1,0 +1,27 @@
+Web site
+
+lo primero es crear una carpeta, adentro voy a colocar algunos archivos con diferentes extensiones.
+
+* lo primero que debo hacer es crear un archivo .html
+
+¿que es html?
+
+es un lenguaje que funciona cómo un arbolito.
+en <html> va todo el código de la página.
+
+en el <body> va el titulo y la descripción, las cosas que se ven.
+
+en el <head> va codigo, cosas que no se ven dentro de la página.
+
+Todo archivo de HTML es estructurado, la estructura de HTML va en forma de arbolito.
+
+La raíz es <html> del cual salen 2 ramas <head> y <body>
+
+de head salen otras ramitas:
+* <title>
+* <script>
+
+
+de body salen otras ramitas:
+* <h1>
+* <p>

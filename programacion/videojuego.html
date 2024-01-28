@@ -4,23 +4,56 @@
         <meta charset="utf-8" />
         <title>Juego PPoT</title>
         <script>
+            //funciones 
+            function aleatorio(min,max){
+                Math.floor(Math.random() * (max - min + 1) + min)
+            }
+
+            function eleccion(jugada){
+                let resultado = ""
+                if(jugada == 1){
+                    resultado = "piedra 🪨"
+                } else if(jugada == 2){
+                    resultado = "papel 📄"
+                } else if(jugada == 3){
+                    resultado = "tijeras ✂️"
+                } else {
+                    resultado = "una respuesta que está fuera del juego"
+                }
+                return resultado
+            }
             // 1 es piedra, 2 papel, 3 tijera
             let jugador = 0
-            let pc = 2
+            let pc = (1,3) 
             jugador = prompt("Elige: 1 = piedra, 2 = papel, 3 = tijeras.")
             //alert("elegiste " + jugador)
-            if(jugador == 1){
-                alert("elegiste piedra")
-            } else if(jugador == 2){
-                alert("elegiste papel")
-            } else if(jugador == 3){
-                alert("elegiste tijera")
+            
+            alert("PC elige: " + eleccion(pc))
+            alert("Tú eliges: " + eleccion(jugador))
+
+            //COMBATE
+            if(pc == jugador){
+                alert("empate")
+            } else if (pc == 1 && jugador == 2){
+                alert("ganaste")
+            } else if (pc == 2 && jugador == 3){
+                alert("ganaste")
+            } else if (pc == 3 && jugador == 1){
+                alert("ganaste")
+            } else if (pc == 2 && jugador == 1){
+                alert("perdiste")
+            } else if (pc == 3 && jugador == 2){
+                alert("perdiste")
+            } else if (pc == 1 && jugador == 3){
+                alert("perdiste")
             } else {
-                alert("esa respuesta está fuera del juego")
+                alert("perdiste")
             }
         </script>
     </head>
     <body>
-
+        <h1>
+            Juega a piedra papel y tijera con migo
+        </h1>
     </body>
 </html>

@@ -4,24 +4,46 @@ lo primero es crear una carpeta, adentro voy a colocar algunos archivos con dife
 
 * lo primero que debo hacer es crear un archivo .html
 
-¿que es html?
+# ¿que es html?
 
-es un lenguaje que funciona cómo un arbolito.
-en <html> va todo el código de la página.
+	es un lenguaje que funciona cómo un arbolito.
+	en <html> va todo el código de la página.
 
-en el <body> va el titulo y la descripción, las cosas que se ven.
+	en el <body> va el titulo y la descripción, las cosas que se ven.
 
-en el <head> va codigo, cosas que no se ven dentro de la página.
+	en el <head> va codigo, cosas que no se ven dentro de la página.
 
-Todo archivo de HTML es estructurado, la estructura de HTML va en forma de arbolito.
+	Todo archivo de HTML es estructurado, la estructura de HTML va en forma de arbolito.
 
-La raíz es <html> del cual salen 2 ramas <head> y <body>
+	La raíz es <html> del cual salen 2 ramas <head> y <body>
 
-de head salen otras ramitas:
-* <title>
-* <script>
+	de head salen otras ramitas:
+	* <title>
+	* <script> (en esta parte va el código de Javascript)
 
 
-de body salen otras ramitas:
-* <h1>
-* <p>
+	de body salen otras ramitas:
+	* <h1>
+	* <p>
+
+#Programación con Javascript
+
+es un lenguaje de programación usado principalmente para el desarrollo web.
+he aprendido de momento que se pueden crear funciones.
+también he aprendido que las variables se crean utilizando el comando "let".
+tambien existen los objetos que son por decirlo así, funciones ya predefinidas por el lenguaje.
+	por ejemplo : Math
+
+A las funciones se le ponen parametros dentro de los parentesis.
+los parametros son por decirlo así especificaciones o valores que se le dan a una función.
+
+	*Funciones: son pedasos de codigo que se pueden usar muchas veces,
+	si tenemos que copiar y pegar el mismo código, merece ser llamado una función,
+	para invocarla cuando la necesitemos. por ejemplo:
+
+	vamos a crear una función que trae cosas de lugares:
+
+	function traer(sandwich,tienda) = acá estamos dando orden a la funcion de traer algo "sandwich" de un lugar "tienda".
+	"sandwich" y "tienda" son parametros.
+	"traer" es un nombre de variable y es una buena practica que comience con una letra minúscula.
+	los parametros en casi todos los lenguajes van entre parentesis.

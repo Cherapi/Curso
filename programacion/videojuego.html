@@ -22,33 +22,35 @@
                 }
                 return resultado
             }
-            // 1 es piedra, 2 papel, 3 tijera
+            // JUGADORES Y RESULTADOS
             let jugador = 0
-            let pc = aleatorio(1,3) 
-            jugador = prompt("Elige: 1 = piedra, 2 = papel, 3 = tijeras.")
-            //alert("elegiste " + jugador)
-            
-            alert("PC elige: " + eleccion(pc))
-            alert("Tú eliges: " + eleccion(jugador))
+            let pc = 0
+            let triunfos = 0
+            let perdidas = 0
 
-            //COMBATE
-            if(pc == jugador){
-                alert("empate")
-            } else if (pc == 1 && jugador == 2){
-                alert("ganaste")
-            } else if (pc == 2 && jugador == 3){
-                alert("ganaste")
-            } else if (pc == 3 && jugador == 1){
-                alert("ganaste")
-            } else if (pc == 2 && jugador == 1){
-                alert("perdiste")
-            } else if (pc == 3 && jugador == 2){
-                alert("perdiste")
-            } else if (pc == 1 && jugador == 3){
-                alert("perdiste")
-            } else {
-                alert("perdiste")
+            while (triunfos < 3 && perdidas < 3){
+                
+                //CONDICIONES DE JUEGO
+                pc = aleatorio(1,3) 
+                jugador = prompt("Elige: 1 = piedra, 2 = papel, 3 = tijeras.")                
+                alert("PC elige: " + eleccion(pc))
+                alert("Tú eliges: " + eleccion(jugador))
+
+                //COMBATE
+                if(pc == jugador){
+                    alert("empate")
+                } else if ((pc == 1 && jugador == 2) || (pc == 2 && jugador == 3) || (pc == 3 && jugador == 1)){
+                    alert("ganaste")
+                    triunfos = triunfos + 1
+                } else {
+                    alert("perdiste")
+                    perdidas = perdidas + 1
+                }
             }
+
+            alert("ganaste " + triunfos + " veces y perdiste " + perdidas + " veces")
+            
+           
         </script>
     </head>
     <body>

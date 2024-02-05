@@ -47,3 +47,9 @@ los parametros son por decirlo así especificaciones o valores que se le dan a u
 	"sandwich" y "tienda" son parametros.
 	"traer" es un nombre de variable y es una buena practica que comience con una letra minúscula.
 	los parametros en casi todos los lenguajes van entre parentesis.
+
+algunas funciones requieren que se les agregue eventos,
+es decir que comience a funcionar despues de que se haga click,
+o despues de que cargue la página.
+
+es bueno adquirir algunos habitos, como poner ";" al terminar una linea.

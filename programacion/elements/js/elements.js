@@ -9,6 +9,12 @@ let resultado = ""
 
 //funciones
 function iniciarJuego(){
+
+    let sectionAtaque = document.getElementById('seleccionar-ataque')
+    sectionAtaque.style.display = 'none'
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
     let b_mascota = document.getElementById('b-mascota');
     b_mascota.addEventListener('click', seleccionarMascotaJugador);
     let b_reiniciar = document.getElementById('boton-reiniciar')
@@ -19,6 +25,13 @@ function aleatorio (min,max) {
 }
 // SELECCION DE MASCOTAS DEL PC Y DEL JUGADOR
 function seleccionarMascotaJugador(){
+
+    
+    let sectionMascotas = document.getElementById('seleccionar-mascota')
+    sectionMascotas.style.display = 'none'
+
+    let sectionAtaque = document.getElementById('seleccionar-ataque')
+    sectionAtaque.style.display = 'block'
 
     let spanMascotaJugador = document.getElementById('mascota-jugador');
     
@@ -41,6 +54,7 @@ function seleccionarMascotaJugador(){
         spanMascotaJugador.innerHTML = "leon"
     } else {
         alert("no has seleccionado aún")
+        reiniciar()
     }
     
     seleccionarMascotaPc();
@@ -127,6 +141,9 @@ function mensajeFinal(resultadofinal){
     r_final.innerHTML = resultadofinal
     sectionMensajes.appendChild(r_final)
 
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block'
+
     let b_fuego = document.getElementById('b-fuego');
     b_fuego.disabled = true;
 
@@ -135,7 +152,6 @@ function mensajeFinal(resultadofinal){
     
     let b_tierra = document.getElementById ('b-tierra');
     b_tierra.disabled = true;
-
 }
 function marcador(){
     if(ataqueJugador == ataqueEnemigo){

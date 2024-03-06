@@ -4,57 +4,87 @@
         <meta charset="utf-8"/>
         <title>Elements</title>
         <script src="./js/elements.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <style>
+            
+        </style>
+    
     </head>
     <body>
-        <h1>Elements 🔥💧🌱</h1>
-
         <section id = "seleccionar-mascota">
-            <h2>Elige a tu mascota:</h2>
-            
-            <ul>
-                <li>
-                    <label for="tiburon">tiburón</label>
-                    <input type="radio" name="mascota" id="tiburon"/>
-                </li>
-                <li>
-                    <label for="topo">topo</label>
-                    <input type="radio" name="mascota" id="topo"/>
-                </li>
-                <li>
-                    <label for="fenix">fenix</label>
-                    <input type="radio" name="mascota" id="fenix"/>
-                </li>
-                <li>
-                    <label for="tortuga">tortuga</label>
-                    <input type="radio" name="mascota" id="tortuga"/>
-                </li>
-                <li>
-                    <label for="leon">leon</label>
-                    <input type="radio" name="mascota" id="leon"/>
-                </li>
-            </ul>
+            <h1 class="titulo">Elements</h1>
+            <h2 class="subtitulo">Elige a tu mascota:</h2>
+           
+            <div class="tarjetas">
+                <input type="radio" name="mascota" id="tiburon"/>
+                <label class="tarjeta-de-mascota" for="tiburon">
+                    <p>tiburón</p>
+                    <img src="./assets/tiburon.png" alt="tiburon">
+                </label>
+                
+                <input type="radio" name="mascota" id="topo"/>
+                <label class="tarjeta-de-mascota" for="topo">
+                    <p>topo</p>
+                    <img src="./assets/topo.png" alt="topo">
+                </label>
+                
+                <input type="radio" name="mascota" id="fenix"/>
+                <label class="tarjeta-de-mascota" for="fenix">
+                    <p>fenix</p>
+                    <img src="./assets/fenix.png" alt="fenix">
+                </label>
+                
+                <input type="radio" name="mascota" id="tortuga"/>
+                <label class="tarjeta-de-mascota" for="tortuga">
+                    <p>tortuga</p>
+                    <img src="./assets/tortuga.png" alt="tortuga">
+                </label>
+                
+                <input type="radio" name="mascota" id="leon"/>
+                <label class="tarjeta-de-mascota" for="leon">
+                    <p>leon</p>
+                    <img src="./assets/leon.png" alt="leon">
+                </label>
+            </div>
 
             <button id="b-mascota">seleccionar</button>
 
         </section>
 
         <section id = "seleccionar-ataque">
-            <h2>Elige a tu ataque:</h2>
-            <p>tu mascota es: <span id="mascota-jugador"></span> y tiene <span id="vida-jugador">3</span> vidas</p>
-            <p>la mascota del enemigo es: <span id="mascota-pc"></span> y tiene <span id="vida-pc">3</span> vidas</p>
+            <h1 class="titulo">Elements</h1>
+            <h2 class="subtitulo">Elige a tu ataque:</h2>
+            
+            <div>
+                <button id="b-fuego" class="boton-de-ataque">fuego 🔥</button>
+                <button id="b-agua" class="boton-de-ataque">agua 💧</button>
+                <button id="b-tierra" class="boton-de-ataque">tierra 🌱</button>
+            </div>
 
-            <p>
-                <button id="b-fuego">fuego 🔥</button>
-                <button id="b-agua">agua 💧</button>
-                <button id="b-tierra">tierra 🌱</button>
-            </p>
+            <div id="marcador">
+                <div id="ataque-jugador"></div>
+                <div id="ataque-pc"></div>
+
+                <div id="tarjeta-jugador" class="tarjeta-seleccionada">
+                    <p>tu mascota es: <span id="mascota-jugador"></span></p>
+                    <p>tienes <span id="vida-jugador">3</span> vidas</p>
+                </div>
+
+                <section id = "mensajes">
+                    <p id="resultado">¡Suerte!</p>
+                </section>
+
+                <div id="tarjeta-pc" class="tarjeta-seleccionada">
+                    <p>la mascota del enemigo es: <span id="mascota-pc"></span></p>
+                    <p>tiene <span id="vida-pc">3</span> vidas</p>
+                </div>
+            </div>
+
         </section>
-        
-        <section id = "mensajes">
-            <p></p>
-        </section>
+
         <section id = "reiniciar">
             <button id="boton-reiniciar">reiniciar</button>
         </section>
+        
     </body>
 </html>

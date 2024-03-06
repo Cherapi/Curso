@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+body {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(./assets/fondo.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+      
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: #98D8AA;
+    font-size: 60px;
+}
+
+.subtitulo{
+    color: #98D8AA;
+    font-size: 25px;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.tarjeta-de-mascota {
+    width: 180px;
+    height: 110px;
+    background-color: rgba(152, 171, 238, 0.4);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 2px solid ;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.tarjeta-de-mascota img {
+    width: 80px;
+    width: 80px;
+    margin: 10px;
+    position: relative;
+    left: 12px;
+}
+
+#b-mascota {
+    background: rgba(152, 171, 238, 0.6);
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    margin: 8px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+}
+
+#b-mascota:hover{
+    background-color: rgba(152, 171, 238, 0.9);
+}
+    
+input{
+    display: none;
+}
+
+label:hover{
+    background-color: rgba(152, 171, 238, 0.9)
+}
+
+input:checked+label{
+    background-color: rgba(152, 171, 238, 1);
+    padding: 5px;
+    }
+
+#seleccionar-ataque {
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: rgba(152, 171, 238, 0.4);
+    border-radius: 8px;
+    width: 180px;
+    height: 60px;
+    margin: 8px;
+    padding: 5px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.boton-de-ataque:hover{
+    background-color: rgba(152, 171, 238, 0.8);
+}
+
+#marcador {
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-seleccionada{
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(152, 171, 238, 0.4);
+    align-items: center;
+}
+
+#resultado {
+    color: black solid;
+    background-color: rgba(152, 171, 238, 0.4);
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

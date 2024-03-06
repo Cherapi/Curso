@@ -53,3 +53,12 @@ es decir que comience a funcionar despues de que se haga click,
 o despues de que cargue la página.
 
 es bueno adquirir algunos habitos, como poner ";" al terminar una linea.
+
+Parte de CSS
+
+css es agregar el estilo al html, ayuda a que se le ponga color, altura anchura y muchas otras cosas mas al html.
+
+para agregar color, se usa "color:'color que queramos';"
+para agregar anchura se usa "width: 'medida';"
+para agregar altura se usa "height: 'medida';"
+para agregar color de fondo se usa "background-color: 'color que queramos';"

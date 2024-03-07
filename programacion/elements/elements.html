@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Elements</title>
         <script src="./js/elements.js"></script>
         <link rel="stylesheet" href="./styles.css">
@@ -62,29 +63,27 @@
             </div>
 
             <div id="marcador">
-                <div id="ataque-jugador"></div>
-                <div id="ataque-pc"></div>
-
                 <div id="tarjeta-jugador" class="tarjeta-seleccionada">
-                    <p>tu mascota es: <span id="mascota-jugador"></span></p>
+                    <p>Tú <span id="mascota-jugador"></span></p>
                     <p>tienes <span id="vida-jugador">3</span> vidas</p>
                 </div>
 
                 <section id = "mensajes">
                     <p id="resultado">¡Suerte!</p>
+                    <div id = "reiniciar">
+                        <button id="boton-reiniciar">reiniciar</button>
+                    </div>
                 </section>
 
                 <div id="tarjeta-pc" class="tarjeta-seleccionada">
-                    <p>la mascota del enemigo es: <span id="mascota-pc"></span></p>
+                    <p>Enemigo <span id="mascota-pc"></span></p>
                     <p>tiene <span id="vida-pc">3</span> vidas</p>
                 </div>
             </div>
 
         </section>
 
-        <section id = "reiniciar">
-            <button id="boton-reiniciar">reiniciar</button>
-        </section>
+        
         
     </body>
 </html>

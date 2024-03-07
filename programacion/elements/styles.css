@@ -32,7 +32,6 @@ body {
 .tarjetas{
     display: flex;
     gap: 30px;
-    
 }
 
 .tarjeta-de-mascota {
@@ -108,8 +107,9 @@ input:checked+label{
 }
 
 #marcador {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 .tarjeta-seleccionada{
@@ -128,8 +128,72 @@ input:checked+label{
     background-color: rgba(152, 171, 238, 0.4);
     width: 120px;
     height: 80px;
+    margin-top: 30px;
+    padding: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+}
+#mensajes {
+    display: grid;
+    grid-template-rows: 120px 150px;
+    justify-items: center;
+}
+#reiniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 360px) {
+    .tarjetas{
+        flex-direction: column;
+    }
+    .titulo{
+        height: 0px;
+    }
+    #marcador {
+        display: grid;
+        grid-template-rows: repeat(3, 120px);
+        grid-template-columns: none;
+    }
+    #mensajes{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: none;
+    align-items: center;
+    justify-items: center;
+    }
+    .boton-de-ataque {
+        width: 80px;
+        height: 30px;
+        margin: 1px;
+        font-size: 15px;
+    }
+    .tarjeta-seleccionada{
+    display: grid;
+    grid-template-columns: 60px 60px 80px 80px;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(152, 171, 238, 0.4);
+    align-items: center;
+    width: 300px;
+    height: 70px;
+    margin: 5px;
+    }
+    .imag {
+        width: 70px;
+    }
+    #ataque-jugador, #ataque-pc{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    font-size: 5px;
+    }
+    #reiniciar{
+        text-align: center;
+    }
 }

@@ -41,38 +41,50 @@ function seleccionarMascotaJugador(){
     let tortuga = document.getElementById('tortuga');
     let leon = document.getElementById('leon');
     let tarjetaJugador = document.getElementById('tarjeta-jugador')
+    let resultadoJ= document.createElement('p');
+    resultadoJ.id = "ataque-jugador";
     
     
     if(tiburon.checked){
         spanMascotaJugador.innerHTML = "tiburon";
         let imagenJugador = document.createElement('img');
+        imagenJugador.className = "imag";
         imagenJugador.src = "./assets/tiburon.png";
         imagenJugador.alt = "tiburon";
         tarjetaJugador.appendChild(imagenJugador);
+        tarjetaJugador.appendChild(resultadoJ);
     } else if (topo.checked){
         spanMascotaJugador.innerHTML = "topo";
         let imagenJugador = document.createElement('img');
+        imagenJugador.className = "imag";
         imagenJugador.src = "./assets/topo.png";
         imagenJugador.alt = "topo";
         tarjetaJugador.appendChild(imagenJugador);
+        tarjetaJugador.appendChild(resultadoJ);
     } else if (fenix.checked){
         spanMascotaJugador.innerHTML = "fenix";
         let imagenJugador = document.createElement('img');
+        imagenJugador.className = "imag";
         imagenJugador.src = "./assets/fenix.png";
         imagenJugador.alt = "fenix";
         tarjetaJugador.appendChild(imagenJugador);
+        tarjetaJugador.appendChild(resultadoJ);
     } else if (tortuga.checked){
         spanMascotaJugador.innerHTML = "tortuga"
         let imagenJugador = document.createElement('img');
+        imagenJugador.className = "imag";
         imagenJugador.src = "./assets/tortuga.png";
         imagenJugador.alt = "tortuga";
         tarjetaJugador.appendChild(imagenJugador);
+        tarjetaJugador.appendChild(resultadoJ);
     } else if (leon.checked){
         spanMascotaJugador.innerHTML = "leon"
         let imagenJugador = document.createElement('img');
+        imagenJugador.className = "imag";
         imagenJugador.src = "./assets/leon.png";
         imagenJugador.alt = "leon";
         tarjetaJugador.appendChild(imagenJugador);
+        tarjetaJugador.appendChild(resultadoJ);
     } else {
         alert("no has seleccionado aún")
         reiniciar()
@@ -96,39 +108,51 @@ function seleccionarMascotaPc(){
 
     let mascotaPc = aleatorio(1,5)
     let spanMascotaPc = document.getElementById('mascota-pc');
-    let tarjetaPC = document.getElementById('tarjeta-pc')
+    let tarjetaPC = document.getElementById('tarjeta-pc');
+    let resultadoPc= document.createElement('p');
+    resultadoPc.id = "ataque-pc";
 
 
     if(mascotaPc == 1){
         spanMascotaPc.innerHTML = "tiburon";
         let imagenPc = document.createElement('img');
+        imagenPc.className = "imag";
         imagenPc.src = "./assets/tiburon.png";
         imagenPc.alt = "tiburon";
         tarjetaPC.appendChild(imagenPc);
+        tarjetaPC.appendChild(resultadoPc);
     } else if (mascotaPc == 2){
         spanMascotaPc.innerHTML = "topo";
         let imagenPc = document.createElement('img');
+        imagenPc.className = "imag";
         imagenPc.src = "./assets/topo.png";
         imagenPc.alt = "topo";
         tarjetaPC.appendChild(imagenPc);
+        tarjetaPC.appendChild(resultadoPc);
     } else if (mascotaPc == 3){
         spanMascotaPc.innerHTML = "fenix";
         let imagenPc = document.createElement('img');
+        imagenPc.className = "imag";
         imagenPc.src = "./assets/fenix.png";
         imagenPc.alt = "fenix";
         tarjetaPC.appendChild(imagenPc);
+        tarjetaPC.appendChild(resultadoPc);
     } else if (mascotaPc == 4){
         spanMascotaPc.innerHTML = "tortuga"
         let imagenPc = document.createElement('img');
+        imagenPc.className = "imag";
         imagenPc.src = "./assets/tortuga.png";
         imagenPc.alt = "tortuga";
         tarjetaPC.appendChild(imagenPc);
+        tarjetaPC.appendChild(resultadoPc);
     } else if (mascotaPc == 5){
         spanMascotaPc.innerHTML = "leon"
         let imagenPc = document.createElement('img');
+        imagenPc.className = "imag";
         imagenPc.src = "./assets/leon.png";
         imagenPc.alt = "leon";
         tarjetaPC.appendChild(imagenPc);
+        tarjetaPC.appendChild(resultadoPc);
     } 
     
 }
@@ -177,20 +201,13 @@ function crearMensaje(){
     nuevoAtaqueJugador.innerHTML = ataqueJugador
     nuevoAtaquePc.innerHTML = ataqueEnemigo
 
-    //let parrafo = document.createElement('p')
-    //parrafo.innerHTML = 'Tu mascota atacó con '+ ataqueJugador +', la mascota del enemigo atacó con '+ ataqueEnemigo+' tu ' + resultado +'.'
-
     ataqueDeJugador.appendChild(nuevoAtaqueJugador)
     ataqueDePc.appendChild(nuevoAtaquePc)
 
-    let sectionAtaque = document.getElementById('seleccionar-ataque');
-
     if(vidaPc == 0){
         mensajeFinal("¡QUE GRAN VICTORIA!");
-        sectionAtaque.style.display = 'none';
     } else if (vidaJugador == 0){
         mensajeFinal("DERROTA");
-        sectionAtaque.style.display = 'none';
     }
 }
 function mensajeFinal(resultadofinal){
@@ -200,7 +217,7 @@ function mensajeFinal(resultadofinal){
     sectionMensaje.appendChild(r_final)
 
     let sectionReiniciar = document.getElementById('reiniciar')
-    sectionReiniciar.style.display = 'block'
+    sectionReiniciar.style.display = 'flex'
 
     let b_fuego = document.getElementById('b-fuego');
     b_fuego.disabled = true;
@@ -230,11 +247,5 @@ function marcador(){
 function reiniciar(){
     location.reload()
 }
-
-//limite del juego
-
-
-
-
 
 window.addEventListener('load', iniciarJuego)
